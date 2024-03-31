@@ -1,12 +1,14 @@
+import Sidebar from "@/components/Sidebar/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Berry UI",
-  description: "Fancy UI component for your fancy needs",
+  title: {
+    default: "Components",
+    template: "%s | Components",
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="ml-auto mr-auto flex max-w-screen-2xl gap-4 border-2 border-red-500 p-4 ">
+          <Sidebar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
