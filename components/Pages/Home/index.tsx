@@ -11,11 +11,6 @@ const initial = {
   filter: "blur(0px)",
 };
 
-const animate = {
-  fontSize: [null, "7rem", "8.5rem", "10rem"],
-  y: [null, -70, -30, 0],
-};
-
 const transition = {
   type: "tween",
   ease: "easeInOut",
@@ -48,7 +43,10 @@ export default function Home() {
                   key={idx}
                   className="inline-block cursor-default text-white hover:text-red-800"
                   initial={initial}
-                  animate={animate}
+                  animate={{
+                    fontSize: [null, "7rem", "8.5rem", "10rem"],
+                    y: [null, -70, -30, 0],
+                  }}
                   transition={transition}
                 >
                   {child}
