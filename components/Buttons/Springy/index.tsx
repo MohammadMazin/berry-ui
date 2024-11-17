@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import DrawerButton from "./DrawerButton";
+import DrawerButton from "../Drawer/DrawerButton";
 import SyntaxHighlighterWrapper from "../SyntaxHighlighterWrapper";
 import SpringyButton from "./SpringyButton";
 
