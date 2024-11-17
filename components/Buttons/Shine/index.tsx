@@ -1,25 +1,30 @@
 "use client";
-import { motion } from "framer-motion";
-import ButtonWrapper from "../ButtonWrapper";
+import { useState } from "react";
+import SyntaxHighlighterWrapper from "../SyntaxHighlighterWrapper";
+import ShineButton from "./ShineButton";
 
-const shine = {
-  rest: {
-    left: -75,
-    right: "auto",
-    rotate: "30deg",
-    scale: 3,
-  },
-  hover: {
-    left: "auto",
-    right: -75,
-    rotate: "30deg",
-    scale: 3,
-  },
-};
-
-export default function Shine() {
-  return (
-    <ButtonWrapper>
+export default function Drawer() {
+  const codeString = `
+  "use client";
+  import { motion } from "framer-motion";
+  
+  const shine = {
+    rest: {
+      left: -75,
+      right: "auto",
+      rotate: "30deg",
+      scale: 3,
+    },
+    hover: {
+      left: "auto",
+      right: -75,
+      rotate: "30deg",
+      scale: 3,
+    },
+  };
+  
+  export default function ShineButton() {
+    return (
       <motion.div
         className="group relative w-max overflow-hidden rounded-md bg-indigo-800"
         whileHover={"hover"}
@@ -34,6 +39,20 @@ export default function Shine() {
           Click Me!
         </motion.button>
       </motion.div>
-    </ButtonWrapper>
+    );
+  }
+  `;
+
+  return (
+    <div className="flex w-full items-center justify-center ">
+      <span className="flex w-1/4 justify-center">
+        <ShineButton />
+      </span>
+      <SyntaxHighlighterWrapper
+        codeString={codeString}
+        title=".tsx"
+      ></SyntaxHighlighterWrapper>
+    </div>
   );
 }
+8;

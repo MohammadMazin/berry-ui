@@ -6,7 +6,7 @@ interface Props {
 
 export default function ButtonWrapper({ children }: Props) {
   return (
-    <section className="w-full rounded-lg border-2 border-slate-700 p-8">
+    <section className="w-full rounded-lg border-slate-700 bg-gray-800 ps-8">
       {children}
     </section>
   );

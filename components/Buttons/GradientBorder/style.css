@@ -1,0 +1,77 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradientAnimation 4s ease infinite;
+    border-radius: 5px;
+}
+
+.animated-gradient-button:hover {
+    animation-play-state: paused;
+}
+
+@keyframes gradientBorderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-border-button {
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    /* Button fill color */
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 5rem;
+
+}
+
+.gradient-border-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: gradientBorderAnimation 4s ease infinite;
+}
+
+.gradient-border-button:hover {
+    background-color: rgb(40, 40, 40);
+
+    /* Optional: Change text color on hover */
+}

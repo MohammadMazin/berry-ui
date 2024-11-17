@@ -26,23 +26,21 @@ const arrow = {
 
 export default function FlyOver() {
   return (
-    <ButtonWrapper>
-      <motion.div
-        whileHover={"hover"}
-        initial={"rest"}
-        animate={"rest"}
-        exit={"exit"}
-        className="relative w-max"
+    <motion.div
+      whileHover={"hover"}
+      initial={"rest"}
+      animate={"rest"}
+      exit={"exit"}
+      className="relative w-max"
+    >
+      <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-md bg-white"></div>
+      <motion.button
+        variants={button}
+        className="z-10 flex w-full justify-center gap-2 rounded-md bg-purple-700 px-8 py-4 text-xl font-bold"
       >
-        <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-md bg-white"></div>
-        <motion.button
-          variants={button}
-          className="z-10 flex w-full justify-center gap-2 rounded-md bg-purple-700 px-8 py-4 text-xl font-bold"
-        >
-          Click Me!
-          <motion.div variants={arrow}>-{">"}</motion.div>
-        </motion.button>
-      </motion.div>
-    </ButtonWrapper>
+        Click Me!
+        <motion.div variants={arrow}>-{">"}</motion.div>
+      </motion.button>
+    </motion.div>
   );
 }

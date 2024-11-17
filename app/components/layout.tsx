@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="ml-auto mr-auto flex max-w-screen-2xl gap-4 border-2 border-red-500 p-4 ">
+        <div className="ml-auto mr-auto flex max-w-screen-2xl gap-4 p-4 ">
           <Sidebar />
           {children}
         </div>

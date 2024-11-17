@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Berry UI",
-  description: "Fancy UI component for your fancy needs",
+  description: "Fancy UI components for your fancy needs",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-purple-950">{children}</body>
     </html>
   );
 }
